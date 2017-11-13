@@ -1,0 +1,30 @@
+{
+  "apps": [
+    {
+      "name": "worker-app",
+      "script": "./worker.js",
+      "cwd": "./worker_app/",
+      "watch": true,
+      // "watch": ["worker"],
+      // "ignore_watch" : ["node_modules", "client/img"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "api-app",
+      "script": "./api.js",
+      "cwd": "./api_app/",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
